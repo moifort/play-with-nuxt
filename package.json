@@ -1,0 +1,26 @@
+{
+  "name": "things",
+  "version": "1.0.0",
+  "description": "My splendiferous Nuxt.js project",
+  "author": "Thibaut Mottet",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "yarn build && firebase deploy --only hosting"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "nuxt": "^1.0.0",
+    "vuetify": "^0.17.3"
+  },
+  "devDependencies": {
+    "@std/esm": "^0.26.0",
+    "cross-env": "^5.0.1",
+    "esm": "^3.0.14",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
+  }
+}
