@@ -38,7 +38,9 @@ module.exports = {
     */
     plugins: [
         '@/plugins/vuetify',
-        '@/plugins/firebase'
+        '@/plugins/firebase',
+        '@/plugins/filters/number',
+        '@/plugins/filters/date',
     ],
 
     /*
