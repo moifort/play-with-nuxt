@@ -37,7 +37,8 @@ module.exports = {
     ** Plugins to load before mounting the App
     */
     plugins: [
-        '@/plugins/vuetify'
+        '@/plugins/vuetify',
+        '@/plugins/firebase'
     ],
 
     /*
@@ -53,6 +54,14 @@ module.exports = {
     */
     axios: {
         // See https://github.com/nuxt-community/axios-module#options
+    },
+
+    env: {
+        firebase: {
+            apiKey: 'AIzaSyCZo04vGSPU57UlKhyHdCVSBFG8nNE9Vmc',
+            authDomain: 'things-fae70.firebaseapp.com',
+            databaseURL: 'https://things-fae70.firebaseio.com/'
+        }
     },
 
     /*

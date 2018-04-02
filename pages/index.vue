@@ -26,6 +26,12 @@
             Temperature,
             CapacitiveButtons,
             Info
+        },
+        mounted: function () {
+            const starCountRef = this.$firebase.database().ref('/temperature')
+            starCountRef.on('value', function(snapshot) {
+                console.log(snapshot.val())
+            });
         }
     }
 </script>
