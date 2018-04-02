@@ -16,11 +16,6 @@
         components: {
             Header,
             NavigationDrawer
-        },
-        data() {
-            return {
-                isDrawerNavMini: false
-            }
         }
     }
 </script>

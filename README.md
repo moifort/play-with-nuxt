@@ -3,6 +3,8 @@
 Web application (deploy on Firebase Hosting), displaying data from [NXP i.MX7D](https://developer.android.com/things/hardware/imx7d-kit.html) 
 in real time.
 
+https://things-fae70.firebaseapp.com/
+
 ## Build Setup
 
 ``` bash

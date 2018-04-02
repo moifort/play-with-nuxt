@@ -26,6 +26,9 @@
             Temperature,
             CapacitiveButtons,
             Info
+        },
+        created: function () {
+            this.$store.dispatch('weather/startListeningTemperature')
         }
     }
 </script>
