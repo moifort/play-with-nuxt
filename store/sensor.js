@@ -5,7 +5,7 @@ export const state = () => ({
 
 export const actions = {
     startListeningTemperature({commit}) {
-        const starCountRef = this.$firebase.database().ref('/weather/temperature')
+        const starCountRef = this.$firebase.database().ref('/sensor/temperature')
         starCountRef.on('value', function(snapshot) {
             commit('setTemperature', snapshot.val().value)
             commit('setTemperatureUpdateTime', new Date(snapshot.val().timestamp))

@@ -21,8 +21,8 @@
 
     export default {
         computed: mapGetters({
-            temperature: 'weather/temperature',
-            updateTime: 'weather/temperatureUpdateTime'
+            temperature: 'sensor/temperature',
+            updateTime: 'sensor/temperatureUpdateTime'
         }),
     }
 </script>

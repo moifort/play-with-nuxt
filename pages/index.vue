@@ -17,7 +17,7 @@
 </template>
 
 <script>
-    import Temperature from '~/components/Weather/Temperature'
+    import Temperature from '~/components/Sensor/Temperature'
     import CapacitiveButtons from '~/components/Hardware/CapacitiveButtons'
     import Info from '~/components/Hardware/Info'
 
@@ -28,7 +28,8 @@
             Info
         },
         created: function () {
-            this.$store.dispatch('weather/startListeningTemperature')
+            this.$store.dispatch('sensor/startListeningTemperature')
+            this.$store.dispatch('button/startListeningButtonState')
         }
     }
 </script>
