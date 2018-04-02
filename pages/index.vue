@@ -30,6 +30,7 @@
         created: function () {
             this.$store.dispatch('sensor/startListeningTemperature')
             this.$store.dispatch('button/startListeningButtonState')
+            this.$store.dispatch('update/startListeningUpdate')
         }
     }
 </script>
