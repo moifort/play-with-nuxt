@@ -34,12 +34,6 @@
             oemVersion: 'update/oemVersion',
             updateTime: 'update/statusUpdateTime',
         }),
-        data () { return { locale: 'en' } },
-        watch: {
-            locale (val) {
-                this.$i18n.locale = val
-            }
-        },
     }
 </script>
 

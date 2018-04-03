@@ -75,16 +75,7 @@ module.exports = {
         ** You can extend webpack config here
         */
         extend(config, ctx) {
-            // https://github.com/nuxt-community/nuxt-i18n/issues/58
-            config.module.rules.push({
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        i18n: '@kazupon/vue-i18n-loader'
-                    }
-                }
-            })
+            config.module.rules.find( el => el.loader === 'vue-loader' ).options.loaders.i18n = '@kazupon/vue-i18n-loader'
 
             if (ctx.isServer) {
                 config.externals = [
