@@ -75,7 +75,9 @@ module.exports = {
         ** You can extend webpack config here
         */
         extend(config, ctx) {
-            config.module.rules.find( el => el.loader === 'vue-loader' ).options.loaders.i18n = '@kazupon/vue-i18n-loader'
+            const vueLoaderConfig = config.module.rules.find(el => el.loader === 'vue-loader').options
+            vueLoaderConfig.loaders.i18n = '@kazupon/vue-i18n-loader'
+            vueLoaderConfig.preLoaders = {i18n: 'yaml-loader'}
 
             if (ctx.isServer) {
                 config.externals = [
