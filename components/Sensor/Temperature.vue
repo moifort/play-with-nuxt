@@ -8,7 +8,7 @@
                     </div>
                     <div>
                         <div style="font-size: 80px">{{ temperature | number(1, '', '°')}}</div>
-                        <div>Actual temperature, {{ updateTime | moment("from") }}</div>
+                        <div>{{ $t('temperature') }}, {{ updateTime | moment("from") }}</div>
                     </div>
                 </v-flex>
             </v-layout>
@@ -26,3 +26,12 @@
         }),
     }
 </script>
+
+<i18n>
+    fr:
+        temperature: "Température actuelle"
+    en:
+        temperature: "Actual temperature"
+    ja:
+        temperature: "実際の温度"
+</i18n>

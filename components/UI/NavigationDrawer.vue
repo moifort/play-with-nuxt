@@ -19,7 +19,7 @@
                     <v-icon>dashboard</v-icon>
                 </v-list-tile-action>
                 <v-list-tile-content>
-                    <v-list-tile-title>Dashboard</v-list-tile-title>
+                    <v-list-tile-title>{{ $t('dashboard')}}</v-list-tile-title>
                 </v-list-tile-content>
             </v-list-tile>
             <v-list-tile @click="$router.push('/about')">
@@ -27,7 +27,7 @@
                     <v-icon>code</v-icon>
                 </v-list-tile-action>
                 <v-list-tile-content>
-                    <v-list-tile-title>About</v-list-tile-title>
+                    <v-list-tile-title>{{ $t('about')}}</v-list-tile-title>
                 </v-list-tile-content>
             </v-list-tile>
         </v-list>
@@ -43,3 +43,15 @@
         }),
     }
 </script>
+
+<i18n>
+    fr:
+        dashboard: "Bureau"
+        about: "A propos"
+    en:
+        dashboard: "Dashboard"
+        about: "About"
+    ja:
+        dashboard: "ダッシュボード"
+        about: "約"
+</i18n>
