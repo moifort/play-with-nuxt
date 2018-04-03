@@ -1,5 +1,4 @@
 const pkg = require('./package')
-
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
@@ -41,6 +40,7 @@ module.exports = {
         '@/plugins/firebase',
         '@/plugins/filters/number',
         '@/plugins/filters/date',
+        '@/plugins/i18n.js',
     ],
 
     /*
@@ -66,6 +66,7 @@ module.exports = {
         }
     },
 
+
     /*
     ** Build configuration
     */
@@ -74,6 +75,9 @@ module.exports = {
         ** You can extend webpack config here
         */
         extend(config, ctx) {
+            const vueLoaderConfig = config.module.rules.find(el => el.loader === 'vue-loader').options
+            vueLoaderConfig.loaders.i18n = '@kazupon/vue-i18n-loader'
+            vueLoaderConfig.preLoaders = {i18n: 'yaml-loader'}
 
             if (ctx.isServer) {
                 config.externals = [
@@ -82,6 +86,7 @@ module.exports = {
                     })
                 ]
             }
+
         }
-    }
+    },
 }
