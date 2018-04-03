@@ -5,6 +5,8 @@ in real time.
 
 https://things-fae70.firebaseapp.com/
 
+![demo](./demo.gif)
+
 ## Build Setup
 
 ``` bash

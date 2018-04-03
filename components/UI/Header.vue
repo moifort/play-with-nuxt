@@ -8,19 +8,19 @@
                 <v-icon>language</v-icon>
             </v-btn>
             <v-list>
-                <v-list-tile @click="setLocale('fr')">
+                <v-list-tile avatar @click="setLocale('fr')">
                     <v-list-tile-avatar tile>
                         <img src="~assets/flags/france.png">
                     </v-list-tile-avatar>
                     <v-list-tile-title>Français</v-list-tile-title>
                 </v-list-tile>
-                <v-list-tile @click="setLocale('en')">
+                <v-list-tile avatar @click="setLocale('en')">
                     <v-list-tile-avatar tile>
                         <img src="~assets/flags/england.png">
                     </v-list-tile-avatar>
                     <v-list-tile-title>English</v-list-tile-title>
                 </v-list-tile>
-                <v-list-tile @click="setLocale('ja')">
+                <v-list-tile avatar @click="setLocale('ja')">
                     <v-list-tile-avatar tile>
                         <img src="~assets/flags/japan.png">
                     </v-list-tile-avatar>
